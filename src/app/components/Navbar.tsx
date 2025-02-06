@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useState } from "react";
 
+
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -50,7 +51,7 @@ const Navbar: React.FC = () => {
               Contact
             </Link>
             <Link
-              href="/login"
+              href="/Login"
               className="bg-gradient-to-r from-green-600 to-green-700 text-white px-6 py-2 rounded-full hover:shadow-xl hover:scale-105 transition-all duration-300"
             >
               Login
@@ -119,7 +120,7 @@ const Navbar: React.FC = () => {
                 Contact
               </Link>
               <Link
-                href="/login"
+                href="/Login"
                 className="block bg-gradient-to-r from-green-600 to-green-700 text-white px-6 py-2 rounded-full text-center hover:shadow-xl transition-all duration-300"
               >
                 Login
