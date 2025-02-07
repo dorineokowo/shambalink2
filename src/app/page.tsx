@@ -272,7 +272,7 @@ const HomePage: React.FC = () => {
           />
         </div>
       </section>
-      <section className="py-20 text-center min-h-screen flex items-center justify-center">
+      <section id="contact" className="py-20 text-center min-h-screen flex items-center justify-center">
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-2xl transform transition-all duration-500 hover:scale-105">
         <h1 className="text-green-600 text-4xl font-bold text-center mb-8 animate-fade-in">
           Contact Us
