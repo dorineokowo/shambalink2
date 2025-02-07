@@ -45,7 +45,7 @@ const Navbar: React.FC = () => {
               Services
             </Link>
             <Link
-              href="/contact"
+              href="/Contact"
               className="text-gray-700 font-semibold hover:text-green-600 transition-all duration-300 transform hover:scale-110 hover:translate-x-2 hover:underline"
             >
               Contact
@@ -114,7 +114,7 @@ const Navbar: React.FC = () => {
                 Services
               </Link>
               <Link
-                href="/contact"
+                href="/Contact"
                 className="block text-gray-700 font-semibold hover:text-green-600 px-3 py-2 rounded-md transition-all duration-300 transform hover:scale-110 hover:translate-x-2 hover:underline"
               >
                 Contact

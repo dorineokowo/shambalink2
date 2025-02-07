@@ -5,6 +5,9 @@ import Footer from "./components/Footer";
 import Modal from "./components/Modal"; // Import the Modal component
 import Signup from "./Signup/page"; // Import the SignupForm component
 import Image from "next/image";
+import ContactForm from "./components/ContactForm";
+import SocialIcons from "./components/SocialIcons";
+
 import {
   FaShoppingCart,
   FaChalkboardTeacher,
@@ -273,6 +276,35 @@ const HomePage: React.FC = () => {
           />
         </div>
       </section>
+      <section className="py-20 text-center min-h-screen flex items-center justify-center">
+      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-2xl transform transition-all duration-500 hover:scale-105">
+        <h1 className="text-green-600 text-4xl font-bold text-center mb-8 animate-fade-in">
+          Contact Us
+        </h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="animate-slide-up">
+            <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+              Get in Touch
+            </h2>
+            <p className="text-gray-600 mb-6">
+              Have a question or need assistance? Fill out the form, and we&apos;ll
+              get back to you as soon as possible.
+            </p>
+            <ContactForm />
+          </div>
+          <div className="animate-slide-up">
+            <h2 className="text-green-600 text-2xl font-semibold mb-4">
+              Follow Us
+            </h2>
+            <p className="text-gray-600 mb-6">
+              Stay connected with us on social media for the latest updates and
+              news.
+            </p>
+            <SocialIcons />
+          </div>
+        </div>
+      </div>
+        </section>
 
       {/* Footer */}
       <Footer />
