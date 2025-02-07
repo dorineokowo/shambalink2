@@ -1,7 +1,5 @@
 "use client";
-import React, { useState } from "react";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import React, { useState } from "react";;
 import Modal from "./components/Modal"; // Import the Modal component
 import Signup from "./Signup/page"; // Import the SignupForm component
 import Image from "next/image";
@@ -48,8 +46,6 @@ const HomePage: React.FC = () => {
   const closeModal = () => setIsModalVisible(false);
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Navbar */}
-      <Navbar />
 
       {/* Hero Section */}
       <div className="relative w-full h-screen flex items-center justify-center text-center">
@@ -305,9 +301,6 @@ const HomePage: React.FC = () => {
         </div>
       </div>
         </section>
-
-      {/* Footer */}
-      <Footer />
     </div>
   );
 };
