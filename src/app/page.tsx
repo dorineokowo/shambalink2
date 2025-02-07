@@ -5,6 +5,9 @@ import Signup from "./Signup/page"; // Import the SignupForm component
 import Image from "next/image";
 import ContactForm from "./components/ContactForm";
 import SocialIcons from "./components/SocialIcons";
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+
 
 import {
   FaShoppingCart,
@@ -36,6 +39,29 @@ const testimonials = [
     imageSrc:
       "https://img.freepik.com/premium-photo/photo-closeup-portrait-young-man-profile-view_1077802-269144.jpg", // Replace with actual image path
     imageAlt: "Peter",
+  },
+];
+
+const steps = [
+  {
+    title: '1. Sign Up',
+    description: 'Create an account in minutes.',
+    imageUrl: 'https://cdn.prod.website-files.com/64df59246c5afade390eb791/65a6a74e7c2d505d72dacdcd_How%20to%20Sign%20a%20Word%20Document%20Electronically_%204%20Effective%20Techniques%20Explained.png',
+  },
+  {
+    title: '2. Connect',
+    description: 'Find buyers or sellers in your area.',
+    imageUrl: 'https://static1.bigstockphoto.com/6/7/1/large1500/176399293.jpg',
+  },
+  {
+    title: '3. Transact',
+    description: 'Sell or buy products securely.',
+    imageUrl: 'https://www.dsgpay.com/wp-content/uploads/2023/06/Online-Transactions-for-Businesses-3.png',
+  },
+  {
+    title: '4. Learn',
+    description: 'Access e-learning resources.',
+    imageUrl: 'https://www.learndash.com/wp-content/uploads/learn-written-on-blocks.jpg',
   },
 ];
 
@@ -150,6 +176,41 @@ const HomePage: React.FC = () => {
           </div>
         </div>
       </div>
+      
+      {/* How It Works */}
+      <section className="py-20 text-center">
+  <h2 className="text-3xl font-bold text-green-800 mb-8">How It Works</h2>
+  <Carousel
+    showArrows={true}
+    showStatus={false}
+    showIndicators={true}
+    infiniteLoop={true}
+    autoPlay={true}
+    interval={5000}
+    stopOnHover={true}
+    swipeable={true}
+    emulateTouch={true}
+  >
+    {steps.map((step, index) => (
+      <div
+        key={index}
+        className="h-64 flex flex-col items-center justify-center text-white"
+        style={{
+          backgroundImage: `url(${step.imageUrl})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <h3 className="text-2xl text-green-800 font-bold bg-white bg-opacity-80 px-4 py-2 rounded">
+          {step.title}
+        </h3>
+        <p className="mt-2 bg-black bg-opacity-50 px-4 py-2 rounded">
+          {step.description}
+        </p>
+      </div>
+    ))}
+  </Carousel>
+</section>
 
       {/* Key Statistics */}
       <section className="py-20 bg-green-100 text-center">
@@ -173,28 +234,7 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* How It Works */}
-      <section className="py-20 text-center">
-        <h2 className="text-3xl font-bold text-green-800 mb-8">How It Works</h2>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-          <div>
-            <h3 className="text-xl font-semibold">1. Sign Up</h3>
-            <p>Create an account in minutes.</p>
-          </div>
-          <div>
-            <h3 className="text-xl font-semibold">2. Connect</h3>
-            <p>Find buyers or sellers in your area.</p>
-          </div>
-          <div>
-            <h3 className="text-xl font-semibold">3. Transact</h3>
-            <p>Sell or buy products securely.</p>
-          </div>
-          <div>
-            <h3 className="text-xl font-semibold">4. Learn</h3>
-            <p>Access e-learning resources.</p>
-          </div>
-        </div>
-      </section>
+
 
       <section className="py-20 bg-gray-100 text-center">
         <h2 className="text-3xl font-bold text-green-800 mb-8">
