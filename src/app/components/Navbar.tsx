@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import Modal from "./Modal"; // Import the Modal component
-import Login from "../Login/page"; // Import the LoginForm component
+import Login from "../pages/Login"; // Import the LoginForm component
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

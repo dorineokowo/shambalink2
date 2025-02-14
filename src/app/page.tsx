@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";;
 import Modal from "./components/Modal"; // Import the Modal component
-import Signup from "./Signup/page"; // Import the SignupForm component
+import Signup from "././pages/Signup"; // Import the SignupForm component
 import Image from "next/image";
 import ContactForm from "./components/ContactForm";
 import SocialIcons from "./components/SocialIcons";
@@ -124,17 +124,15 @@ const HomePage: React.FC = () => {
             {/* Market Access Card */}
             <div
               className="relative bg-white p-6 rounded-lg shadow-lg text-center transition-all duration-500 transform hover:scale-105 hover:translate-y-2 group"
-              style={{
-                backgroundImage: "url(/path-to-market-access-image.jpg)",
-              }} // Replace with actual image path
+              
             >
               <div className="mb-4 flex justify-center">
-                <FaShoppingCart className="text-4xl text-green-700 group-hover:hidden" />
+                <FaShoppingCart className="text-4xl text-green-700" />
               </div>
-              <h3 className="text-xl font-semibold text-green-700 mb-4 group-hover:text-white">
+              <h3 className="text-xl font-semibold text-green-700 mb-4">
                 Market Access
               </h3>
-              <p className="text-gray-600 group-hover:text-white">
+              <p className="text-gray-600">
                 Connect directly with buyers and sell your products at fair
                 prices.
               </p>
@@ -143,15 +141,15 @@ const HomePage: React.FC = () => {
             {/* E-Learning Card */}
             <div
               className="relative bg-white p-6 rounded-lg shadow-lg text-center transition-all duration-500 transform hover:scale-105 hover:translate-y-2 group"
-              style={{ backgroundImage: "url(/path-to-e-learning-image.jpg)" }} // Replace with actual image path
+             
             >
               <div className="mb-4 flex justify-center">
-                <FaChalkboardTeacher className="text-4xl text-green-700 group-hover:hidden" />
+                <FaChalkboardTeacher className="text-4xl text-green-700" />
               </div>
-              <h3 className="text-xl font-semibold text-green-700 mb-4 group-hover:text-white">
+              <h3 className="text-xl font-semibold text-green-700 mb-4">
                 E-Learning
               </h3>
-              <p className="text-gray-600 group-hover:text-white">
+              <p className="text-gray-600">
                 Learn modern farming techniques and pest control methods.
               </p>
             </div>
@@ -159,17 +157,15 @@ const HomePage: React.FC = () => {
             {/* Opportunities Card */}
             <div
               className="relative bg-white p-6 rounded-lg shadow-lg text-center transition-all duration-500 transform hover:scale-105 hover:translate-y-2 group"
-              style={{
-                backgroundImage: "url(/path-to-opportunities-image.jpg)",
-              }} // Replace with actual image path
+              
             >
               <div className="mb-4 flex justify-center">
-                <FaRegHandshake className="text-4xl text-green-700 group-hover:hidden" />
+                <FaRegHandshake className="text-4xl text-green-700" />
               </div>
-              <h3 className="text-xl font-semibold text-green-700 mb-4 group-hover:text-white">
+              <h3 className="text-xl font-semibold text-green-700 mb-4">
                 Opportunities
               </h3>
-              <p className="text-gray-600 group-hover:text-white">
+              <p className="text-gray-600">
                 Discover grants, scholarships, and training programs.
               </p>
             </div>
@@ -190,6 +186,7 @@ const HomePage: React.FC = () => {
     stopOnHover={true}
     swipeable={true}
     emulateTouch={true}
+    showThumbs={false}
   >
     {steps.map((step, index) => (
       <div
@@ -199,6 +196,7 @@ const HomePage: React.FC = () => {
           backgroundImage: `url(${step.imageUrl})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
+          
         }}
       >
         <h3 className="text-2xl text-green-800 font-bold bg-white bg-opacity-80 px-4 py-2 rounded">
@@ -272,14 +270,16 @@ const HomePage: React.FC = () => {
 
         {/* App Image */}
         <div className="mb-4">
-          <Image
-            src="https://mercycorpsagrifin.org/wp-content/uploads/2023/07/Shamba-pride-R.jpg" // Replace with your app image path
-            alt="Shambalink App"
-            width={192} // Replace with your image's width
-            height={192} // Replace with your image's height
-            className="mx-auto"
-            unoptimized
-          />
+        <Image
+  src="https://mercycorpsagrifin.org/wp-content/uploads/2023/07/Shamba-pride-R.jpg"
+  alt="Shambalink App"
+  width={192}
+  height={192}
+  className="mx-auto"
+  unoptimized
+  style={{ width: "auto", height: "auto" }}
+/>
+
         </div>
 
         {/* Description */}
